@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="formApp">
+<head>
+	<title>Form Validations</title>
+	<link href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<form name="studentform">
+	<div ng-controller="formCntrl">
+	<label>First Name</label><span class="text-danger">*</span>
+	<input type="text" name="firstname" ng-model="firstname" required="true">
+	<div ng-show="studentform.firstname.$invalid" class="text-danger">This field is invalid</div>
+	</div>
+</form>
+</body>
+<script src="../../bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
+<script src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../../angular-1.6.2/angular.min.js"></script>
+<script src="formmodule.js"></script>
+<script src="formcontroller.js"></script>
+</html>
